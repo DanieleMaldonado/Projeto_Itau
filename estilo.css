@@ -85,8 +85,11 @@ p
 }
 
 #titulonoticias {
-  display: flex;
-  justify-content: center;
+  display: box;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 [id^="noticias"], [class^="autores"]
@@ -99,8 +102,14 @@ p
 }
 
 #noticias3 {
-  display: flex;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 924px;
 }
 
 [id^="noticias"] h3
@@ -112,11 +121,27 @@ p
   border: grey 1px solid;
   box-shadow: grey 2px 2px 3px;
   padding: 20px;
+
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  align-content: space-between;
 }
 
 .relacaoNoticias img {
   width: 100%;
   height: auto;
+}
+
+.relacaoNoticias .logotipos
+{
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+}
+
+.relacaoNoticias h3
+{
+  text-align: center;
 }
 
 .relacaoNoticias p
@@ -127,23 +152,84 @@ p
 
 .relacaoNoticias a
 {
-    background-color: brown;
-    border-radius: 5px;;
-    color: cornsilk;
-    padding: 5px;
-    width: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
-.relacaoNoticias a:hover
+.relacaoNoticias a img
 {
-    background-color: cadetblue;
+  height: 24px;
+}
+
+#tituloSobre
+{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 footer 
 {
   margin-top: 30px;
-  background-color: #78108b;
-  color: white;
+  background-color: #f8e8b5;
+  color: black;
   text-align: center;
   padding: 20px;
+}
+
+.imagemrodape
+{
+  width: 320px;
+  height: 205px;
+}
+
+/* Contacto */
+
+form
+{
+  background-color: #f8e8b5;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  max-width: 520px;
+  padding: 20px;
+}
+
+form .grupos
+{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+form .grupos .grupo
+{
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+input, select, textarea
+{
+  border: 1px solid #f8e8b5;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+form button
+{
+  background-color: cadetblue;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  color: ghostwhite;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}
+
+form button:hover
+{
+  background-color: brown;
 }

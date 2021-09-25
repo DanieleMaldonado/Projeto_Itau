@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloform.css"/>
+   
+    <title> Cadastro Pessoal - Projeto Itaú </title>
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <form>
+
+            <h1 id="titulo">Cadastro de Dados Pessoais </h1>
+            <p>* campos obrigatórios</p></br>
+
+            <section class="linha1">
+
+                <div class="campo">
+                    <label for="nome" class="required">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf" class="required">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Apenas números" size="11" maxlength="11" onblur="validacao()" required>
+                </div>
+
+            </section>
+
+            <section class="linha2">
+
+                <div class="campo">
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" id="rg" placeholder="Apenas números">
+                </div>
+                
+                <div class="campo">
+                    <label for="data">Data de Nascimento</label>
+                    <input type="date" name="data" id="data" placeholder="dd/mm/aaaa" maxlength="10">
+                </div>
+                
+                <div class="campo">
+                    <label>sexo</label>
+                    <select id="sexo">
+                        <option selected disabled value="0">Selecione</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                    </select>
+                </div>
+
+            </section>
+                
+            <section class="linha3">
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" pattern="\d{5}-?\d{3}" placeholder="XXXXX-XXX">
+                </div>
+                
+                <div class="campo">
+                    <label for="endereco" class="required">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Avenida, rua..." required>
+                </div>
+            </section>
+                
+            <section class="linha4">
+                <div class="campo">
+                    <label for="numero" class="required">Número</label>
+                    <input type="text" name="numero" id="numero" placeholder="ex.:00" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" name="complemento" id="complemento" placeholder="Casa, apto...">
+                </div>
+                
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro">
+                </div>
+                
+            </section>
+                
+            <section class="linha5">
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+                </div>
+                
+                <div class="campo">
+                    <label>Estado</label>
+                    <select id="estado">
+                        <option selected disabled value="0">Selecione</option>
+                        <option value="ac">Acre</option>
+                        <option value="al">Alagoas</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ap">Amapá</option>
+                        <option value="ba">Bahia</option>
+                        <option value="ce">Ceará</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="go">Goiás</option>
+                        <option value="ma">Maranhão</option>
+                        <option value="mt">Mato Grosso</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pa">Pará</option>
+                        <option value="pb">Paraíba</option>
+                        <option value="pr">Paraná</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="rn">Rio Grande do Norte</option>
+                        <option value="ro">Rondônia</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="rr">Roraima</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="se">Sergipe</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="to">Tocantins</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="ex@email.com">
+                </div>
+
+            </section>
+                    
+            <section class="linha6">
+
+                <div class="campo">
+                    <label for="fixo">Telefone Fixo com DDD</label>
+                    <input type="text" name="fixo" id="fixo" placeholder="(00) 0000-0000" maxlength="14" onkeypress="mascaraFixo()">
+                </div>
+                    
+                <div class="campo">
+                    <label for="celular" class="required">Telefone Celular com DDD*</label>
+                    <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000" maxlength="15"
+                    onkeypress="mascaraCelular()" required>
+                </div>
+
+            </section></br>
+                    
+                <button type="submit" class="botao" onclick="enviar()">Concluir</button>
+
+        </form>            
+                              
+</body>
+                  
+</html>
